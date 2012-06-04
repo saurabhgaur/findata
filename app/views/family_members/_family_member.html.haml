@@ -1,0 +1,9 @@
+%li
+  %span
+    =family_member.name
+    - if family_member.email_id.nil?
+      %p No mail id
+    - else
+      =family_member.email_id
+  =if current_user?(family_member.user)
+    -link_to "delete", family_member, method: :delete, confirm: "You sure?"

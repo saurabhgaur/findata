@@ -2,3 +2,13 @@
   User: #{@user.name}
 %p
   Email: #{@user.email if @user.email}
+%p
+.FamilyList
+  - if @user.family_members.any?
+    %h3 #{ @user.family_members.count} Family Members
+    %ol 
+    =render @user.family_members 
+%p
+.AddFamily
+  =render 'shared/family_member_form'
+

@@ -1,4 +1,5 @@
 Findata::Application.routes.draw do
+
   authenticated :user do
     root :to => 'home#index'
   end
@@ -6,5 +7,7 @@ Findata::Application.routes.draw do
   devise_for :users
   resources :users, :only => [:show, :index]
   resources :family_members, only: [:create, :destroy]
+  resources :investments, only: [:create, :destroy]
+  
   
 end

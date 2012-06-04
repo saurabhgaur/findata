@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @family_member = current_user.family_members.build
+    @investment = current_user.investments.build
   end
 
 end

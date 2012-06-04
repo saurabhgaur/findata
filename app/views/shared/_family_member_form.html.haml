@@ -1,5 +1,5 @@
 = form_for(@family_member) do |f|
   .field
-    = f.text_area :name, placeholder: "Add new family member..."
-    = f.text_area :email_id, placeholder: "Add new family member..."
+    = f.text_field :name, placeholder: "Family Member Name..."
+    = f.text_field :email_id, placeholder: "Family Member EmailID..."
   = f.submit "Add Family Member", class: "btn btn-large btn-primary"

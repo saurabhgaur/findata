@@ -1,0 +1,5 @@
+= form_for(@investment) do |f|
+  .field
+    = f.text_field :institution_name, placeholder: "Insitution Name..."
+    = f.text_field :account_number, placeholder: "Account Number..."
+  = f.submit "Add Account", class: "btn btn-large btn-primary"

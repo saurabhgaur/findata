@@ -40,5 +40,6 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :confirmed_at
 
   has_many :family_members, dependent: :destroy
+  has_many :investments, dependent: :destroy
   
 end

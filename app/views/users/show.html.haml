@@ -9,6 +9,17 @@
     %ol 
     =render @user.family_members 
 %p
-.AddFamily
+.AddFamilyMember
   =render 'shared/family_member_form'
+
+
+%p
+.InvestmentsList
+  - if @user.investments.any?
+    %h3 #{ @user.investments.count} Accounts
+    %ol 
+    =render @user.investments 
+%p
+.AddInvestment
+  =render 'shared/investment_form'
 

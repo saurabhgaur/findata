@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20120602135421) do
 
   create_table "family_members", :force => true do |t|
-    t.string   "user_id"
+    t.integer  "user_id"
     t.string   "name"
     t.string   "email_id"
     t.datetime "created_at", :null => false

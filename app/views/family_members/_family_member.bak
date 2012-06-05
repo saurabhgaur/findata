@@ -7,3 +7,5 @@
       =family_member.email_id
   =if current_user?(family_member.user)
     -link_to "delete", family_member, method: :delete, confirm: "You sure?"
+
+     data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">

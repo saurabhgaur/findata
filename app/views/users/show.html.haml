@@ -1,13 +1,21 @@
 %p
-  User: #{@user.name}
+  %h1
+    Welcome, #{@user.name} 
+  %h4
+    #{@user.email if @user.email}
 %p
-  Email: #{@user.email if @user.email}
-%p
-.FamilyList
-  - if @user.family_members.any?
-    %h3 #{ @user.family_members.count} Family Members
-    %ol 
-    =render @user.family_members 
+.accordion-group.FamilyList
+  .accordion-heading
+  %a.accordion-toggle data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+  %h3 Family Members(#{@user.family_members.count})
+  %table.table.table-striped
+    %tr
+      %th ID
+      %th Name
+      %th Email
+      %th Actions
+    %tr
+      =render @user.family_members 
 %p
 .AddFamilyMember
   =render 'shared/family_member_form'
@@ -15,10 +23,16 @@
 
 %p
 .InvestmentsList
-  - if @user.investments.any?
-    %h3 #{ @user.investments.count} Accounts
-    %ol 
-    =render @user.investments 
+  %h3 Investments(#{@user.investments.count})
+  %table.table.table-striped
+    %tr
+      %th ID
+      %th Institution Name
+      %th Account Number
+      %th Actions
+    %tr
+      =render @user.investments 
+
 %p
 .AddInvestment
   =render 'shared/investment_form'

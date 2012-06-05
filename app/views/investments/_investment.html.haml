@@ -1,11 +1,9 @@
-%li
-  %span
-    Institution Name = 
+%tr
+  %td
+    =investment.id
+  %td
     =investment.institution_name
-    - if investment.account_number.nil?
-      %p No Account Number
-    - else
-      Account number =  
-      =investment.account_number
-  =if current_user?(investment.user)
-    -link_to "delete", investment, method: :delete, confirm: "You sure?"
+  %td
+    =investment.account_number
+  %td
+    =link_to "Delete", investment, method: :delete, confirm: "You sure?", :class => 'btn btn-mini btn-danger'

@@ -1,9 +1,9 @@
-%li
-  %span
+%tr
+  %td
+    =family_member.id
+  %td
     =family_member.name
-    - if family_member.email_id.nil?
-      %p No mail id
-    - else
-      =family_member.email_id
-  =if current_user?(family_member.user)
-    -link_to "delete", family_member, method: :delete, confirm: "You sure?"
+  %td
+    =family_member.email_id
+  %td
+    =link_to "Delete", family_member, method: :delete, confirm: "You sure?", :class => 'btn btn-mini btn-danger'

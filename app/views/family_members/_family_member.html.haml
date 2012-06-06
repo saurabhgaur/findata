@@ -6,4 +6,8 @@
   %td
     =family_member.email_id
   %td
-    =link_to "Delete", family_member, method: :delete, confirm: "You sure?", :class => 'btn btn-mini btn-danger'
+    =link_to family_member, method: :delete, confirm: "You sure?", :class => 'btn btn-mini btn-danger' do 
+      %i{:class=>'icon-remove icon-white'}
+      %span
+        Delete
+      %end

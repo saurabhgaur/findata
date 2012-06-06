@@ -7,7 +7,7 @@
 .accordion-group.FamilyList
   .accordion-heading
   %a.accordion-toggle
-  
+
   %h3 Family Members(#{@user.family_members.count})
   %table.table.table-striped
     %tr
@@ -21,8 +21,6 @@
 .AddFamilyMember
   =render 'shared/family_member_form'
 
-
-%p
 .InvestmentsList
   %h3 Investments(#{@user.investments.count})
   %table.table.table-striped

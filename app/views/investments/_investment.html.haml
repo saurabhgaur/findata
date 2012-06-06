@@ -6,4 +6,8 @@
   %td
     =investment.account_number
   %td
-    =link_to "Delete", investment, method: :delete, confirm: "You sure?", :class => 'btn btn-mini btn-danger'
+    =link_to investment, method: :delete, confirm: "You sure?", :class=>'btn btn-mini btn-danger'  do 
+      %i{:class=>'icon-remove icon-white'}
+      %span
+        Delete
+      %end

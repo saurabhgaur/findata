@@ -3,9 +3,10 @@ class FamilyMembersController < ApplicationController
   	@family_member = current_user.family_members.build(params[:family_member])
   	 if @family_member.save
       flash[:success] = "Family Member Added!"
-      redirect_to root_path
+      redirect_to current_user
     else
-      render 'static_pages/home'
+       flash[:failure] = "Family Member could not be added!"
+      redirect_to current_user
     end
   end
 
@@ -14,6 +15,6 @@ class FamilyMembersController < ApplicationController
   	@family_member = current_user.family_members.find_by_id(params[:id])
   	@family_member.destroy
   	flash[:success] = "Family Member Destroyed!"
-    redirect_to root_path
+    redirect_to current_user
   end
 end

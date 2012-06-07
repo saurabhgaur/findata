@@ -18,4 +18,14 @@ describe FamilyMember do
     before { @family_member.user_id = nil }
     it { should_not be_valid }
   end
+
+  describe "with blank name" do
+    before { @family_member.name = " " }
+    it { should_not be_valid }
+  end
+
+  describe "with content that is too long" do
+    before { @family_member.name = "a" * 141 }
+    it { should_not be_valid }
+  end
 end

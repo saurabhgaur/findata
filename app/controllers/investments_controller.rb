@@ -3,9 +3,10 @@ class InvestmentsController < ApplicationController
   	@investment = current_user.investments.build(params[:investment])
   	 if @investment.save
       flash[:success] = "Investment Added!"
-      redirect_to root_path
+      redirect_to current_user
     else
-      render 'static_pages/home'
+      flash[:success] = "Investment could not be added!"
+      redirect_to current_user
     end
   end
 
@@ -14,6 +15,6 @@ class InvestmentsController < ApplicationController
   	@investment = current_user.investments.find_by_id(params[:id])
   	@investment.destroy
   	flash[:success] = "Investment Destroyed!"
-    redirect_to root_path
+    redirect_to current_user
   end
 end

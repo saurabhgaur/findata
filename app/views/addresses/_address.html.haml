@@ -1,0 +1,21 @@
+%tr
+  %td
+    =address.id
+  %td
+    =address.first_line
+  %td
+    =address.second_line
+  %td
+    =address.city
+  %td
+    =address.state
+  %td
+    =address.country
+  %td
+    =address.zip  
+  %td
+    =link_to [@addressable, address], method: :delete, confirm: "You sure?", :class => 'btn btn-mini btn-danger' do 
+      %i{:class=>'icon-remove icon-white'}
+      %span
+        Delete
+      %end 

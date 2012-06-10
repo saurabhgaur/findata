@@ -6,6 +6,14 @@
   %td
     =investment.account_number
   %td
+    =investment.first_owner_name
+  %td
+    =investment.second_owner_name
+  %td
+    =investment.nominee
+  %td
+    =investment.notes    
+  %td
     =link_to investment, method: :delete, confirm: "You sure?", :class=>'btn btn-mini btn-danger'  do 
       %i{:class=>'icon-remove icon-white'}
       %span

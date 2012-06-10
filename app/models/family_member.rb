@@ -5,5 +5,7 @@ class FamilyMember < ActiveRecord::Base
   validates :name, presence: true, length: { maximum: 140 }
   validates :email_id, presence: true, length: { maximum: 140 }
 
+  has_many :addresses, as: :addressable, dependent: :destroy
+
 
 end

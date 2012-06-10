@@ -1,0 +1,10 @@
+%h1 Addresses
+.addresss
+  =@addresses.each do |address|
+    .address
+      = simple_format address.first_line
+%p
+.AddAddress
+  =link_to "New address", [:new, @addressable, :address]
+
+

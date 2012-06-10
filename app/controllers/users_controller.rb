@@ -10,6 +10,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @family_member = current_user.family_members.build
     @investment = current_user.investments.build
+    @addressable = current_user
+    @address = current_user.addresses.build
   end
 
 end

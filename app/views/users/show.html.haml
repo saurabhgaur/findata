@@ -28,6 +28,10 @@
       %th ID
       %th Institution Name
       %th Account Number
+      %th First Owner
+      %th Second Owner
+      %th Nominee
+      %th Notes
       %th Actions
     %tr
       =render @user.investments 
@@ -35,4 +39,22 @@
 %p
 .AddInvestment
   =render 'shared/investment_form'
+
+.AddressesList
+  %h3 Addresses(#{@user.addresses.count})
+  %table.table.table-striped
+    %tr
+      %th ID
+      %th First Line
+      %th Second Line
+      %th City
+      %th State
+      %th Country
+      %th Pin
+      %th Actions
+    %tr
+      =render @user.addresses 
+%p
+.AddAddress
+  =render 'shared/address_form'
 

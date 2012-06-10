@@ -41,5 +41,6 @@ class User < ActiveRecord::Base
 
   has_many :family_members, dependent: :destroy
   has_many :investments, dependent: :destroy
+  has_many :addresses, as: :addressable, dependent: :destroy
   
 end

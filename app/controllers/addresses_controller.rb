@@ -31,6 +31,6 @@ class AddressesController < ApplicationController
 private
   def load_addressable
     resource, id = request.path.split('/')[1,2]
-    @addressable = resource.singularize.classify.constantize.find(1)
+    @addressable = resource.singularize.classify.constantize.find_by_id(id)
   end
 end

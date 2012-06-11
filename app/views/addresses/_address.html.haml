@@ -1,5 +1,5 @@
 %tr
-  %td
+  %td{:width => "2%;"}
     =address.id
   %td
     =address.first_line
@@ -13,7 +13,7 @@
     =address.country
   %td
     =address.zip  
-  %td
+  %td{:width => "10%;"}
     =link_to [@addressable, address], method: :delete, confirm: "You sure?", :class => 'btn btn-mini btn-danger' do 
       %i{:class=>'icon-remove icon-white'}
       %span

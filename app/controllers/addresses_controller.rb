@@ -4,8 +4,6 @@ class AddressesController < ApplicationController
   	@addresses = @addressable.addresses
   end
 
-
-
   def new
     @address = @addressable.addresses.new
   end
@@ -13,16 +11,17 @@ class AddressesController < ApplicationController
   def create
     @address = @addressable.addresses.new(params[:address])
     if @address.save
-      redirect_to current_user, notice: "Address created."
+      redirect_to current_user, notice: "Address Added!"
     else
-      redirect_to current_user, notice: "Address could not be created."
+      flash[:failure] = "Address could not be added!"
+      redirect_to current_user
     end
   end
 
   def destroy
     @address = @addressable.addresses.find_by_id(params[:id])
     @address.destroy
-    flash[:success] = "Address Destroyed!"
+    flash[:notice] = "Address Destroyed!"
     redirect_to @addressable
   end
 

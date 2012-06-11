@@ -4,12 +4,16 @@
   %h4
     #{@user.email if @user.email}
 %p
-.accordion-group.FamilyList
-  .accordion-heading
-  %a.accordion-toggle
+.FamilyList
+  %h3 
+    Family Members(#{@user.family_members.count}) 
+    .btn.btn-primary.btn-small.pull-right{:'data-toggle'=>'collapse', :'data-target'=>'#AddFamilyMember'}
+      Add Family Members
+  %p
+  #AddFamilyMember.collapse.pull-right
+    =render 'shared/family_member_form'
 
-  %h3 Family Members(#{@user.family_members.count})
-  %table.table.table-striped
+  %table.table.table-striped.table-bordered.table-condensed
     %tr
       %th ID
       %th Name
@@ -17,13 +21,18 @@
       %th Actions
     %tr
       =render @user.family_members 
-%p
-.AddFamilyMember
-  =render 'shared/family_member_form'
+
 
 .InvestmentsList
-  %h3 Investments(#{@user.investments.count})
-  %table.table.table-striped
+  %h3 
+    Investments(#{@user.investments.count})
+    .btn.btn-primary.btn-small.pull-right{:'data-toggle'=>'collapse', :'data-target'=>'#AddInvestment'}
+      Add Investments
+    %p
+    #AddInvestment.collapse.pull-right
+      =render 'shared/investment_form'
+  %p
+  %table.table.table-striped.table-bordered.table-condensed
     %tr
       %th ID
       %th Institution Name
@@ -36,13 +45,18 @@
     %tr
       =render @user.investments 
 
-%p
-.AddInvestment
-  =render 'shared/investment_form'
+
 
 .AddressesList
-  %h3 Addresses(#{@user.addresses.count})
-  %table.table.table-striped
+  %h3 
+    Addresses(#{@user.addresses.count})
+    .btn.btn-primary.btn-small.pull-right{:'data-toggle'=>'collapse', :'data-target'=>'#AddAddress'}
+      Add Address
+  %p
+  #AddAddress.collapse.pull-right
+    =render 'shared/address_form'  
+  %p
+  %table.table.table-striped.table-bordered.table-condensed
     %tr
       %th ID
       %th First Line
@@ -54,7 +68,4 @@
       %th Actions
     %tr
       =render @user.addresses 
-%p
-.AddAddress
-  =render 'shared/address_form'
 

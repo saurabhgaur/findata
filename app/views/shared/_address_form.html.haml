@@ -1,17 +1,18 @@
 =form_for [@addressable, @address] do |f|
-  =if @address.errors.any?
-    .error_messages
-      .h2 Please correct the following errors.
-      .ul
-        =@address.errors.full_messages.each do |msg|
-          .li
-            =msg
-  .field
-    = f.text_field :first_line, placeholder: "First Line..."
-    = f.text_field :second_line, placeholder: "Second Line..."
-    = f.text_field :city, placeholder: "City..."
-    = f.text_field :state, placeholder: "State..."
-    = f.text_field :country, placeholder: "Country..."
-    = f.text_field :zip, placeholder: "Pin..."
-    
-    = f.submit "Add Address", class: "btn btn btn-primary"
+  .form-inline
+    =if @address.errors.any?
+      .error_messages
+        .h2 Please correct the following errors.
+        .ul
+          =@address.errors.full_messages.each do |msg|
+            .li
+              =msg
+    .field
+      = f.text_field :first_line, placeholder: "First Line..."
+      = f.text_field :second_line, placeholder: "Second Line..."
+      = f.text_field :city, placeholder: "City..."
+      = f.text_field :state, placeholder: "State..."
+      = f.text_field :country, placeholder: "Country..."
+      = f.text_field :zip, placeholder: "Pin..."
+      
+      = f.submit "Add", class: "btn btn-small btn-primary"

@@ -1,11 +1,11 @@
 %tr
-  %td
+  %td{:width => "2%;"}
     =family_member.id
   %td
     =family_member.name
   %td
     =family_member.email_id
-  %td
+  %td{:width => "10%;"}
     =link_to family_member, method: :delete, confirm: "You sure?", :class => 'btn btn-mini btn-danger' do 
       %i{:class=>'icon-remove icon-white'}
       %span

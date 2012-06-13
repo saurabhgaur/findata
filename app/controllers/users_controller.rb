@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :correct_user
 
   def index
     authorize! :index, @user, :message => 'Not authorized as an administrator.'
@@ -13,5 +14,19 @@ class UsersController < ApplicationController
     @addressable = current_user
     @address = current_user.addresses.build
   end
+
+private
+  def signed_in_user
+      redirect_to signin_path, notice: "Please sign in." unless signed_in?
+  end
+
+  def current_user?(user)
+      user == current_user
+  end
+  
+  def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_path) unless current_user?(@user)
+  end 
 
 end

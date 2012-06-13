@@ -1,3 +1,10 @@
-%h3 Home
-- @users.each do |user|
-  %p User: #{link_to user.name, user}
+%h1 Welcome to Fin Data!!
+- if user_signed_in?
+	= link_to "Edit My Financial Data", current_user
+- else
+	= link_to('Please Login to edit your Financial Data', new_user_session_path)
+
+
+/ %h3 Home
+/ - @users.each do |user|
+/   %p User: #{link_to user.name, user}

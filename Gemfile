@@ -54,3 +54,4 @@ gem "will_paginate", ">= 3.0.3"
 gem "therubyracer", :group => :assets, :platform => :ruby
 gem 'annotate', '~> 2.4.1.beta'
 gem 'faker'
+gem 'omniauth-facebook'

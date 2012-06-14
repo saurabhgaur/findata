@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120607042459) do
+ActiveRecord::Schema.define(:version => 20120614040441) do
 
   create_table "addresses", :force => true do |t|
     t.text     "first_line"
@@ -59,6 +59,16 @@ ActiveRecord::Schema.define(:version => 20120607042459) do
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
 
+  create_table "services", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "uname"
+    t.string   "uemail"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "email",                                :default => "", :null => false
     t.string   "encrypted_password",                   :default => ""
@@ -83,6 +93,8 @@ ActiveRecord::Schema.define(:version => 20120607042459) do
     t.integer  "invitation_limit"
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_filter :correct_user
 
   def index
+    flash[:notice] = "User Index"
     authorize! :index, @user, :message => 'Not authorized as an administrator.'
     @users = User.paginate(:page => params[:page])
   end

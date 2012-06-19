@@ -1,0 +1,5 @@
+$('.delete_family_member').live('ajax:success',
+  function(e, data, textStatus, jqXHR){
+    $(this).closest('tr').fadeOut();
+  }
+);

@@ -15,6 +15,10 @@ class FamilyMembersController < ApplicationController
   	@family_member = current_user.family_members.find_by_id(params[:id])
   	@family_member.destroy
   	flash[:notice] = "Family Member Destroyed!"
-    redirect_to current_user
+    # redirect_to current_user
+    respond_to do |format|
+      format.html { redirect_to(users_url) }
+      format.js 
+    end 
   end
 end

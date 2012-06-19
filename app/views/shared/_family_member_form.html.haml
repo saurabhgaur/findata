@@ -1,5 +1,12 @@
-= form_for(@family_member) do |f|
-  .field.form-inline
-    = f.text_field :name, placeholder: "Family Member Name..."
-    = f.text_field :email_id, placeholder: "Family Member EmailID..."
-    = f.submit "Add", class: "btn btn-small btn-primary"
+.modal-header
+  %button.close{"data-dismiss" => "modal", :type => "button"} ×
+  %h3 Add Family Member
+.modal-body
+= simple_form_for @family_member, validate: true do |f|
+  .form-inline.form-horizontal
+    = f.input :name, placeholder: "Family Member Name..."
+    = f.input :email_id, placeholder: "Family Member EmailID..."
+    = f.input :notify
+    .modal-footer
+      %a.btn{"data-dismiss" => "modal", :href => "#"} Close
+      = f.submit "Add", class: "btn btn-primary"

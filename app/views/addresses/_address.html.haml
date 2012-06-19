@@ -14,8 +14,8 @@
   %td
     =address.zip  
   %td{:width => "10%;"}
-    =link_to [@addressable, address], method: :delete, confirm: "You sure?", :class => 'btn btn-mini btn-danger' do 
-      %i{:class=>'icon-remove icon-white'}
+    =link_to [@addressable, address], method: :delete, remote: :true, confirm: "You sure?", :class => 'btn btn-mini btn-danger delete_address' do 
+      %i{:class=>'icon-trash icon-white'}
       %span
         Delete
       %end 

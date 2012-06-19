@@ -22,7 +22,11 @@ class AddressesController < ApplicationController
     @address = @addressable.addresses.find_by_id(params[:id])
     @address.destroy
     flash[:notice] = "Address Destroyed!"
-    redirect_to @addressable
+    # redirect_to @addressable
+    respond_to do |format|
+      format.html { redirect_to(users_url) }
+      format.js 
+    end
   end
 
 

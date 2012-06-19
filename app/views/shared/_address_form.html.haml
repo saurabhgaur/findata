@@ -1,5 +1,9 @@
-=form_for [@addressable, @address] do |f|
-  .form-inline
+.modal-header
+  %button.close{"data-dismiss" => "modal", :type => "button"} ×
+  %h3 Add Address
+.modal-body
+=simple_form_for [@addressable, @address], :validate => true do |f|
+  .form-inline.form-horizontal
     =if @address.errors.any?
       .error_messages
         .h2 Please correct the following errors.
@@ -8,11 +12,12 @@
             .li
               =msg
     .field
-      = f.text_field :first_line, placeholder: "First Line..."
-      = f.text_field :second_line, placeholder: "Second Line..."
-      = f.text_field :city, placeholder: "City..."
-      = f.text_field :state, placeholder: "State..."
-      = f.text_field :country, placeholder: "Country..."
-      = f.text_field :zip, placeholder: "Pin..."
-      
-      = f.submit "Add", class: "btn btn-small btn-primary"
+      = f.input :first_line, placeholder: "First Line...", :as => :string
+      = f.input :second_line, placeholder: "Second Line...", :as => :string
+      = f.input :city, placeholder: "City...", :as => :string
+      = f.input :state, placeholder: "State...", :as => :string
+      = f.input :country, placeholder: "Country...", :as => :string
+      = f.input :zip, placeholder: "Pin...", :as => :string
+      .modal-footer
+        %a.btn{"data-dismiss" => "modal", :href => "#"} Close
+        = f.submit "Add", class: "btn btn-primary"

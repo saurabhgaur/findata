@@ -55,3 +55,4 @@ gem "therubyracer", :group => :assets, :platform => :ruby
 gem 'annotate', '~> 2.4.1.beta'
 gem 'faker'
 gem 'omniauth-facebook'
+gem 'client_side_validations'

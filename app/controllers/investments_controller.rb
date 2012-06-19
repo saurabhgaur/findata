@@ -11,10 +11,14 @@ class InvestmentsController < ApplicationController
   end
 
   def destroy
-  	
   	@investment = current_user.investments.find_by_id(params[:id])
   	@investment.destroy
   	flash[:notice] = "Investment Destroyed!"
-    redirect_to current_user
+    respond_to do |format|
+      format.html { redirect_to(users_url) }
+      format.js 
+    end
+    # redirect_to current_user
   end
+
 end

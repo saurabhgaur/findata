@@ -1,0 +1,5 @@
+$('.delete_investment').live('ajax:success',
+  function(e, data, textStatus, jqXHR){
+    $(this).closest('tr').fadeOut();
+  }
+);

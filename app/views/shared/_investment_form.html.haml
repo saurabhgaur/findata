@@ -1,10 +1,15 @@
-= form_for(@investment) do |f|
-  .field.form-inline
-    = f.text_field :institution_name, placeholder: "Insitution Name..."
-    = f.text_field :account_number, placeholder: "Account Number..."
-    = f.text_field :first_owner_name, placeholder: "First Owner Name..."
-    = f.text_field :second_owner_name, placeholder: "Second Owner Name..."
-    = f.text_field :nominee, placeholder: "Nomnee..."
-    = f.text_field :notes, placeholder: "Notes..."
-
-    = f.submit "Add", class: "btn btn-small btn-primary"
+.modal-header
+  %button.close{"data-dismiss" => "modal", :type => "button"} ×
+  %h3 Add Investment
+.modal-body
+= simple_form_for @investment , :validate => true do |f|
+  .form-inline.form-horizontal
+    = f.input :institution_name, placeholder: "Insitution Name..."
+    = f.input :account_number, placeholder: "Account Number..."
+    = f.input :first_owner_name, placeholder: "First Owner Name..."
+    = f.input :second_owner_name, placeholder: "Second Owner Name..."
+    = f.input :nominee, placeholder: "Nominee..."
+    = f.input :notes, placeholder: "Notes..."
+    .modal-footer
+      %a.btn{"data-dismiss" => "modal", :href => "#"} Close
+      = f.submit "Add", class: "btn btn-primary"

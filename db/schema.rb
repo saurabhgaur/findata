@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120614040441) do
+ActiveRecord::Schema.define(:version => 20120615042509) do
 
   create_table "addresses", :force => true do |t|
     t.text     "first_line"
@@ -32,8 +32,9 @@ ActiveRecord::Schema.define(:version => 20120614040441) do
     t.integer  "user_id"
     t.string   "name"
     t.string   "email_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.boolean  "notify",     :default => false
   end
 
   create_table "investments", :force => true do |t|

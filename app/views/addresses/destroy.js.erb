@@ -1,5 +1,7 @@
 $('.delete_address').live('ajax:success',
   function(e, data, textStatus, jqXHR){
     $(this).closest('tr').fadeOut();
+    // $(".alert").html("<%= escape_javascript(flash[:notice]) %>");
+    $("#notice").html("<%= escape_javascript(render :partial => 'layouts/messages' , :locals => { :flash => flash }).html_safe %>");
   }
 );

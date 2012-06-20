@@ -1,5 +1,6 @@
 $('.delete_family_member').live('ajax:success',
   function(e, data, textStatus, jqXHR){
     $(this).closest('tr').fadeOut();
+    $("#notice").html("<%= escape_javascript(render :partial => 'layouts/messages' , :locals => { :flash => flash }).html_safe %>");
   }
 );

@@ -6,7 +6,8 @@
 %p
 .FamilyList
   %h3 
-    Family Members(#{@user.family_members.count}) 
+    / Family Members(#{@user.family_members.count}) 
+    Family Members
     %a.btn.btn-primary.pull-right{'href' => '#AddFamilyMember', 'data-toggle' => 'modal'}
       Add Family Members
   %p
@@ -26,7 +27,8 @@
 
 .InvestmentsList
   %h3 
-    Investments(#{@user.investments.count})
+    / Investments(#{@user.investments.count})
+    Investments
     %a.btn.btn-primary.pull-right{'href' => '#AddInvestment', 'data-toggle' => 'modal'}
       Add Investments
     %p
@@ -50,7 +52,8 @@
 
 .AddressesList
   %h3 
-    Addresses(#{@user.addresses.count})
+    / Addresses(#{@user.addresses.count})
+    Addresses
     %a.btn.btn-primary.pull-right{'href' => '#AddAddress', 'data-toggle' => 'modal'}
       Add Address
   %p

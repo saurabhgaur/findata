@@ -10,6 +10,38 @@ class FamilyMembersController < ApplicationController
     end
   end
 
+  def new
+    @family_member = current_user.family_members.build(params[:family_member])
+
+    respond_to do |format|
+      format.html # new.html.haml
+      format.json { render json: @family_member }
+    end
+  end
+
+
+
+  def edit
+    @family_member = current_user.family_members.find_by_id(params[:id])
+  end
+
+
+  # PUT /family_members/1
+  # PUT /family_members/1.json
+  def update
+    @family_member = current_user.family_members.find_by_id(params[:id])
+
+    respond_to do |format|
+      if @family_member.update_attributes(params[:family_member])
+        format.html { redirect_to current_user, notice: 'Family Member was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @family_member.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def destroy
   	
   	@family_member = current_user.family_members.find_by_id(params[:id])

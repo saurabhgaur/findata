@@ -1,19 +1,14 @@
 %p
-  %h1
-    Welcome, #{@user.name} 
-  %h4
-    #{@user.email if @user.email}
-%p
 .FamilyList
   %h3 
     / Family Members(#{@user.family_members.count}) 
     Family Members
-    %a.btn.btn-primary.pull-right{'href' => '#AddFamilyMember', 'data-toggle' => 'modal'}
-      Add Family Members
+    =link_to "Add Family Members", new_family_member_path, {'class' => 'btn btn-primary pull-right'}
+    / %a.btn.btn-primary.pull-right{'href' => '#AddFamilyMember', 'data-toggle' => 'modal'}
+  / %p
+  / #AddFamilyMember.modal.hide
+  /   =render 'shared/family_member_form'
   %p
-  #AddFamilyMember.modal.hide
-    =render 'shared/family_member_form'
-
   %table.table.table-striped.table-bordered.table-condensed
     %tr
       %th ID
@@ -29,11 +24,10 @@
   %h3 
     / Investments(#{@user.investments.count})
     Investments
-    %a.btn.btn-primary.pull-right{'href' => '#AddInvestment', 'data-toggle' => 'modal'}
-      Add Investments
-    %p
-    #AddInvestment.modal.hide
-      =render 'shared/investment_form'
+    =link_to "Add Investments", new_investment_path, {'class' => 'btn btn-primary pull-right'}
+    / %p
+    / #AddInvestment.modal.hide
+    /   =render 'shared/investment_form'
   %p
   %table.table.table-striped.table-bordered.table-condensed
     %tr
@@ -54,11 +48,11 @@
   %h3 
     / Addresses(#{@user.addresses.count})
     Addresses
-    %a.btn.btn-primary.pull-right{'href' => '#AddAddress', 'data-toggle' => 'modal'}
-      Add Address
-  %p
-  #AddAddress.modal.hide
-    =render 'shared/address_form'  
+    =link_to "Add Address", new_polymorphic_path([@addressable,@address]), {'class' => 'btn btn-primary pull-right'}
+    / %a.btn.btn-primary.pull-right{'href' => '#AddAddress', 'data-toggle' => 'modal'}
+  / %p
+  / #AddAddress.modal.hide
+  /   =render 'shared/address_form'  
   %p
   %table.table.table-striped.table-bordered.table-condensed
     %tr

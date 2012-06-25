@@ -18,6 +18,38 @@ class AddressesController < ApplicationController
     end
   end
 
+  def new
+    @address = @addressable.addresses.build(params[:address])
+
+    respond_to do |format|
+      format.html # new.html.haml
+      format.json { render json: @address }
+    end
+  end
+
+
+
+  def edit
+    @address = @addressable.addresses.find_by_id(params[:id])
+  end
+
+
+  # PUT /addresses/1
+  # PUT /addresses/1.json
+  def update
+    @address = @addressable.addresses.find_by_id(params[:id])
+
+    respond_to do |format|
+      if @address.update_attributes(params[:address])
+        format.html { redirect_to current_user, notice: 'address was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @address.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def destroy
     @address = @addressable.addresses.find_by_id(params[:id])
     @address.destroy

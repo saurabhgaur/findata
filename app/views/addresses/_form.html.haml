@@ -1,0 +1,19 @@
+=simple_form_for [@addressable, @address], :validate => true do |f|
+  .form-inline.form-horizontal
+    =if @address.errors.any?
+      .error_messages
+        .h2 Please correct the following errors.
+        .ul
+          =@address.errors.full_messages.each do |msg|
+            .li
+              =msg
+    .field
+      = f.input :first_line, placeholder: "First Line...", :as => :string
+      = f.input :second_line, placeholder: "Second Line...", :as => :string
+      = f.input :city, placeholder: "City...", :as => :string
+      = f.input :state, placeholder: "State...", :as => :string
+      = f.input :country, placeholder: "Country...", :as => :string
+      = f.input :zip, placeholder: "Pin...", :as => :string
+    #footer.pull-right
+      = link_to 'Cancel', current_user , :class => "btn btn-danger"
+      = f.submit "Save", class: "btn btn-primary"

@@ -1,0 +1,11 @@
+.form-inline.form-horizontal
+  = simple_form_for @investment , validate: true do |f|
+    = f.input :institution_name, placeholder: "Insitutional Name..."
+    = f.input :account_number, placeholder: "Account Number..."
+    = f.input :first_owner_name, placeholder: "First Owner Name..."
+    = f.input :second_owner_name, placeholder: "Second Owner Name..."
+    = f.input :nominee, placeholder: "Nominee..."
+    = f.input :notes, placeholder: "Notes..."
+    #footer.pull-right
+      = link_to 'Cancel', current_user , :class => "btn btn-danger"
+      = f.submit "Save", class: "btn btn-primary"

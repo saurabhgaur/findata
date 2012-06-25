@@ -7,8 +7,13 @@
     =family_member.email_id
   %td
     =family_member.notify? ? 'Yes' : 'No'
-  %td{:width => "10%;"}
-    =link_to family_member, method: :delete, remote: :true, confirm: "You sure?", :class => 'btn btn-mini btn-danger delete_family_member' do 
+  %td{:width => "12%;"}
+    =link_to edit_family_member_path(family_member), :class=>'btn btn-mini btn-danger edit_investment'  do 
+      %i{:class=>'icon-edit icon-white'}
+      %span
+        Edit
+      %end
+    =link_to family_member, method: :delete, remote: :true, confirm: "You sure?", :class => 'btn btn-mini btn-danger delete_family_member pull-right' do 
       %i{:class=>'icon-trash icon-white'}
       %span
         Delete

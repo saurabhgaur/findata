@@ -16,6 +16,10 @@ class UsersController < ApplicationController
     @address = current_user.addresses.build
   end
 
+  def sendmail
+    UserMailer.investments_email(@user).deliver
+  end
+
 private
   def signed_in_user
       redirect_to signin_path, notice: "Please sign in." unless signed_in?

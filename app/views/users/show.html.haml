@@ -3,6 +3,7 @@
   %h3 
     / Family Members(#{@user.family_members.count}) 
     Family Members
+    =link_to "Send Investment Details", sendmail_user_path, {'class' => 'btn btn-primary pull-right'}
     =link_to "Add Family Members", new_family_member_path, {'class' => 'btn btn-primary pull-right'}
     / %a.btn.btn-primary.pull-right{'href' => '#AddFamilyMember', 'data-toggle' => 'modal'}
   / %p

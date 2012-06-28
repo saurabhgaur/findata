@@ -5,6 +5,7 @@ class UserMailer < ActionMailer::Base
     @user = user
     @url  = "http://findata.herokuapp.com"
     mail(:to => user.email, :subject => "Investment Details for @user")
+    @current_controller = "usermailer"
   end
 
 end

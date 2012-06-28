@@ -13,14 +13,15 @@
     =investment.nominee
   %td
     =investment.notes    
-  %td{:width => "12%;"}
-    =link_to edit_investment_path(investment), :class=>'btn btn-mini btn-danger edit_investment'  do 
-      %i{:class=>'icon-edit icon-white'}
-      %span
-        Edit
-      %end
-    =link_to investment, method: :delete, remote: :true, confirm: "You sure?", :class=>'btn btn-mini btn-danger delete_investment pull-right'  do 
-      %i{:class=>'icon-trash icon-white'}
-      %span
-        Delete
-      %end
+  =if @current_controller != "usermailer"
+    %td{:width => "12%;"}
+      =link_to edit_investment_path(investment), :class=>'btn btn-mini btn-danger edit_investment'  do 
+        %i{:class=>'icon-edit icon-white'}
+        %span
+          Edit
+        %end
+      =link_to investment, method: :delete, remote: :true, confirm: "You sure?", :class=>'btn btn-mini btn-danger delete_investment pull-right'  do 
+        %i{:class=>'icon-trash icon-white'}
+        %span
+          Delete
+        %end

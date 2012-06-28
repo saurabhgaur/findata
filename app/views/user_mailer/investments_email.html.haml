@@ -7,5 +7,18 @@
       Welcome to findata, #{@user.name}
     %p
       We have sent you the investment details of : #{@user.name}.
-      %br/      
+      %br/
+    %p
+    %table.table.table-striped.table-bordered.table-condensed
+      %tr
+        %th ID
+        %th Institution Name
+        %th Account Number
+        %th First Owner
+        %th Second Owner
+        %th Nominee
+        %th Notes
+      %tr
+        =render @user.investments 
+
     %p Thanks and have a great day!

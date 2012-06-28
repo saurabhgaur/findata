@@ -13,7 +13,7 @@
     =investment.nominee
   %td
     =investment.notes    
-  =if @current_controller != "usermailer"
+  -if @current_controller != "usermailer"
     %td{:width => "12%;"}
       =link_to edit_investment_path(investment), :class=>'btn btn-mini btn-danger edit_investment'  do 
         %i{:class=>'icon-edit icon-white'}
@@ -25,3 +25,4 @@
         %span
           Delete
         %end
+=@current_controller 

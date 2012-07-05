@@ -26,7 +26,8 @@ class InvestmentsController < ApplicationController
   
   def new
     @investment = current_user.investments.build(params[:investment])
-
+    # @secondary_owner_candidates = "'"+ stringify(current_user.family_members().map(&:name)) + "'"
+    @secondary_owner_candidates = stringify(current_user.family_members().map(&:name)<<current_user.name)
     respond_to do |format|
       format.html # new.html.haml
       format.json { render json: @investment }
@@ -66,5 +67,10 @@ class InvestmentsController < ApplicationController
     end
     # redirect_to current_user
   end
-
+  
+  private
+    def stringify(arg)
+        return "[\"" + arg.join("\", \"") + "\"]" if arg.class == Array
+        "'#{arg}'"
+    end
 end

@@ -1,18 +1,20 @@
-/ #AddInvestment.modal
-.modal-header
-  %button.close{"data-dismiss" => "modal", :type => "button"} ×
-  %h3 Add Investment
-.modal-body
-  = simple_form_for @investment , validate: true do |f|
-    .alert-error
-      = f.error_notification
-    .form-inline.form-horizontal
-      = f.input :institution_name, placeholder: "Insitution Name..."
-      = f.input :account_number, placeholder: "Account Number..."
-      = f.input :first_owner_name, placeholder: "First Owner Name..."
-      = f.input :second_owner_name, placeholder: "Second Owner Name..."
-      = f.input :nominee, placeholder: "Nominee..."
-      = f.input :notes, placeholder: "Notes..."
-      .modal-footer
-        %a.btn{"data-dismiss" => "modal", :href => "#"} Close
-        = f.submit "Add", class: "btn btn-primary"
+/ This has been deprecated, don't use this
+
+/ / #AddInvestment.modal
+/ .modal-header
+/   %button.close{"data-dismiss" => "modal", :type => "button"} ×
+/   %h3 Add Investment
+/ .modal-body
+/   = simple_form_for @investment  do |f|
+/     .alert-error
+/       = f.error_notification
+/     .form-inline.form-horizontal
+/       = f.input :institution_name, placeholder: "Insitution Name..."
+/       = f.input :account_number, placeholder: "Account Number..."
+/       = f.input :first_owner_name, placeholder: "First Owner Name..."
+/       = f.input :second_owner_name, placeholder: "Second Owner's Name...", :input_html => {"data-provide=typeahead"}
+/       = f.input :nominee, placeholder: "Nominee..."
+/       = f.input :notes, placeholder: "Notes..."
+/       .modal-footer
+/         %a.btn{"data-dismiss" => "modal", :href => "#"} Close
+/         = f.submit "Add", class: "btn btn-primary"

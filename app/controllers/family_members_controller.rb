@@ -53,4 +53,9 @@ class FamilyMembersController < ApplicationController
       format.js 
     end 
   end
+
+  def stringify(arg)
+      return "[ '" + arg.join("', '") + "' ]" if arg.class == Array
+      "'#{arg}'"
+  end
 end

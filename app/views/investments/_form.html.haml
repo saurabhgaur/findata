@@ -1,5 +1,5 @@
 .form-inline.form-horizontal
-  = simple_form_for @investment do |f|
+  = simple_form_for @investment, :validate => true do |f|
     = f.input :institution_name, placeholder: "Insitutional Name..."
     = f.input :account_number, placeholder: "Account Number..."
     = f.input :first_owner_name, placeholder: "First Owner Name...",:input_html => {:'data-provide' =>"typeahead", :'data-source' =>@secondary_owner_candidates}

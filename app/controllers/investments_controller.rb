@@ -45,6 +45,7 @@ class InvestmentsController < ApplicationController
   # PUT /investments/1.json
   def update
     @investment = current_user.investments.find_by_id(params[:id])
+    @secondary_owner_candidates = stringify(current_user.family_members().map(&:name)<<current_user.name)
 
     respond_to do |format|
       if @investment.update_attributes(params[:investment])

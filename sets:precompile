@@ -1,0 +1,191 @@
+commit f879f34c1f46de9bf4e236929781fbe653001098
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Fri Jul 6 09:35:17 2012 +0530
+
+    add custom validation for email addresses
+
+commit a0c81e0dbedf76ec181bacaba90ef1c566185edc
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Fri Jul 6 09:19:24 2012 +0530
+
+    got client side validatons to work with botstrap using instructions from http://www.ddarrensmith.com/blog/2012/05/17/ruby-on-rails-client-side-validation-with-validation-helpers-and-twitter-bootstrap
+
+commit 8ee1eed5c3e436ecbc87605e28dfc80d97339430
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Thu Jul 5 10:19:18 2012 +0530
+
+    add typeahead to investments form for family members
+
+commit df58f62e5da6145c4efe16838fdbeb69dd2448e7
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Fri Jun 29 09:12:12 2012 +0530
+
+    working on email format
+
+commit 3db5c5d8742dd3bad81ef9281a2b0980e01f7292
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Thu Jun 28 22:35:52 2012 +0530
+
+    adding investments table to email
+
+commit 4e3d064320326b09d6bcabeaf85017e785968499
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Thu Jun 28 09:47:22 2012 +0530
+
+    adding investments table to email
+
+commit 9be3eaaeca91bdc6ba16be94c378889dc40ffdbd
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Wed Jun 27 09:57:37 2012 +0530
+
+    first attempt at sending mails
+
+commit e2ff03a8403df958447fbf52461fcb4afb4c6900
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Wed Jun 27 09:14:41 2012 +0530
+
+    precompiled assets
+
+commit e7ec0d23860c5e25ef8ad311d1fd8301e1c69c41
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Mon Jun 25 10:44:41 2012 +0530
+
+    removed rails.validations tag from application.html.haml as heroku needs it to be precompiled
+
+commit 83e92a38813132b7ca59e58609d1c63504d20cdf
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Mon Jun 25 10:36:48 2012 +0530
+
+    Remove modal dialogs for editing/adding, replace with simple forms
+
+commit 6100744ebb4f1270c4383edd18871f7aa2eeaef9
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Wed Jun 20 09:50:48 2012 +0530
+
+    add openid authentication, specifically gmail
+
+commit 7b522f74e70913eed8ce65edd63506d1fe8fb2f3
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Wed Jun 20 09:29:58 2012 +0530
+
+    update ajax destroy to update flash messages
+
+commit 0cb7164a97053c2744c23ec2cff0ee59c811b31e
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Tue Jun 19 10:49:51 2012 +0530
+
+    add simple form
+
+commit c8b919e25078714883899a7a0bde0c3719dab883
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Thu Jun 14 10:12:36 2012 +0530
+
+    correct facebook.yml
+
+commit f36a4591fd93ca1e73f64e866e1507c58150e4b1
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Thu Jun 14 10:00:47 2012 +0530
+
+    add facebook authentication
+
+commit 1eec21b23315ef6a09b89b3f274f57196ec6d1cd
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Wed Jun 13 11:10:03 2012 +0530
+
+    restrict access to own pages
+
+commit 9d733678c40286259974b948e1691590b8aef60f
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Mon Jun 11 09:44:48 2012 +0530
+
+    Add collapsible divs for forms to add family members, investments, addreses
+
+commit c2d39a19d7e9680bd56bf1b44abf532acad13fa4
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Sun Jun 10 23:53:40 2012 +0530
+
+    change lad addressable
+
+commit 07d816a4e9acdbcb6ba0311db6bc0cb1a6ce79ae
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Sun Jun 10 23:38:05 2012 +0530
+
+    added polymorphic address model
+
+commit 6a35f45c9ee3f46c70df0b0e1340331f9a6c93ad
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Thu Jun 7 09:03:07 2012 +0530
+
+    make sure user returns to the show user page after adding investments/family_members
+
+commit 6a7e06a3394c7200f200d4e272fcd912f640726d
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Wed Jun 6 10:12:55 2012 +0530
+
+    moved add member/investment forms inline
+
+commit 28ecab5d92aa6a2e5242c94163cbdb9f291bd084
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Tue Jun 5 10:49:10 2012 +0530
+
+    beautify investement and family member display - 1
+
+commit a308667af02862f49de504810373bf2e66476d9c
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Tue Jun 5 10:31:41 2012 +0530
+
+    beautify investement and family member display
+
+commit 81de99b49adb260df4c65e1243538fe7746b66c5
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Mon Jun 4 11:02:54 2012 +0530
+
+    add investment model
+
+commit d486438c5ebdac9963e5fe2e1b70511e11a76b12
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Mon Jun 4 10:07:11 2012 +0530
+
+    update user_id column in family members to integer
+
+commit ea3484edcc552f35bb4bb10297648191b4153351
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Mon Jun 4 09:51:40 2012 +0530
+
+    added family members model
+
+commit 43a36585a5cbac03a81e3648c5733a4a990446b9
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Mon May 28 23:11:05 2012 +0530
+
+    updated mailing configs
+
+commit de4a9d2db6c3265e657b0849e066c14b25cdbbd6
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Mon May 28 23:05:47 2012 +0530
+
+    updated mailing configs
+
+commit e17f99c8c12449c33a6b738210b9070b6844a379
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Mon May 28 22:48:37 2012 +0530
+
+    disable assets precompilation
+
+commit d09f70cd1393be57a02efd138575eed7e7feb9bd
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Mon May 28 22:43:21 2012 +0530
+
+    bundle updating sqlite3
+
+commit 02e2057312281933276cde1e4136e80ed92bccdd
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Mon May 28 22:35:04 2012 +0530
+
+    Instructions added
+
+commit c19a63e418d3e1683141905fe421a28926cf64a6
+Author: Saurabh Gaur <saurabhgaur@gmail.com>
+Date:   Mon May 28 22:18:35 2012 +0530
+
+    new Rails app generated by Rails Apps Composer gem

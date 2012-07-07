@@ -1,12 +1,14 @@
-%h1 Welcome to Fin Data!!
+%h1 Welcome to Fin Data!
 - if user_signed_in?
 	= link_to "Edit My Financial Data", current_user
 - else
-	= link_to('Please Sign in to edit your Financial Data', new_user_session_path)
+	%br/
+	%h3 Please Sign in to edit your Financial Data.
+	= link_to('Sign in with FinData Account', new_user_session_path)
 	%br/
 	= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
 	%br/
-	= link_to "Sign in with GMail", user_omniauth_authorize_path(:google)
+	= link_to "Sign in with Gmail", user_omniauth_authorize_path(:google)
 
 
 / %h3 Home

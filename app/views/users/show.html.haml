@@ -1,13 +1,14 @@
 %p
 .FamilyList
-  %h3 
-    / Family Members(#{@user.family_members.count}) 
-    Family Members
-    =link_to "Add Family Members", new_family_member_path, {'class' => 'btn btn-primary pull-right'}
-    / %a.btn.btn-primary.pull-right{'href' => '#AddFamilyMember', 'data-toggle' => 'modal'}
-  / %p
-  / #AddFamilyMember.modal.hide
-  /   =render 'shared/family_member_form'
+  .btn-toolbar
+    %h3 
+      / Family Members(#{@user.family_members.count}) 
+      Family Members
+      =link_to "Add Family Members", new_family_member_path, {'class' => 'btn btn-primary pull-right'}
+      / %a.btn.btn-primary.pull-right{'href' => '#AddFamilyMember', 'data-toggle' => 'modal'}
+    / %p
+    / #AddFamilyMember.modal.hide
+    /   =render 'shared/family_member_form'
   %p
   %table.table.table-striped.table-bordered.table-condensed
     %tr
@@ -21,14 +22,12 @@
 
 
 .InvestmentsList
-  %h3 
-    / Investments(#{@user.investments.count})
-    Investments
-    =link_to "Add Investments", new_investment_path, {'class' => 'btn btn-primary pull-right'}
-    =link_to "Send Investment Details", sendmail_user_path, {'class' => 'btn btn-primary pull-right'}
-    / %p
-    / #AddInvestment.modal.hide
-    /   =render 'shared/investment_form'
+  .btn-toolbar
+    %h3 
+      Investments
+      .pull-right
+        =link_to "Send Investment Details", sendmail_user_path, {'class' => 'btn btn-primary'}
+        =link_to "Add Investments", new_investment_path, {'class' => 'btn btn-primary'}
   %p
   %table.table.table-striped.table-bordered.table-condensed
     %tr
@@ -46,14 +45,15 @@
 
 
 .AddressesList
-  %h3 
-    / Addresses(#{@user.addresses.count})
-    Addresses
-    =link_to "Add Address", new_polymorphic_path([@addressable,@address]), {'class' => 'btn btn-primary pull-right'}
-    / %a.btn.btn-primary.pull-right{'href' => '#AddAddress', 'data-toggle' => 'modal'}
-  / %p
-  / #AddAddress.modal.hide
-  /   =render 'shared/address_form'  
+  .btn-toolbar
+    %h3 
+      / Addresses(#{@user.addresses.count})
+      Addresses
+      =link_to "Add Address", new_polymorphic_path([@addressable,@address]), {'class' => 'btn btn-primary pull-right'}
+      / %a.btn.btn-primary.pull-right{'href' => '#AddAddress', 'data-toggle' => 'modal'}
+    / %p
+    / #AddAddress.modal.hide
+    /   =render 'shared/address_form'  
   %p
   %table.table.table-striped.table-bordered.table-condensed
     %tr

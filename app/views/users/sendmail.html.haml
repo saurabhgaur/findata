@@ -1,1 +1,16 @@
-%h3 Investment Details Sent
+%h3 Investment Details Sent To
+%table.table.table-striped.table-bordered.table-condensed
+	%tr
+		%th ID
+		%th Name
+		%th Email  
+		-@notifyees.each do |notifyee|
+			%tr
+				%td{:width => "2%;"}
+					=notifyee.id
+				%td
+					=notifyee.name
+				%td
+					=notifyee.email_id
+			  
+  

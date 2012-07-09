@@ -5,7 +5,11 @@ class UserMailer < ActionMailer::Base
     @user = user
     @url  = "http://findata.herokuapp.com"
     content_type = "text/html"
-    mail(:to => user.email, :subject => "Investment Details for @user")
+    @user.family_members.each do |family_member|
+    	if family_member.notify?
+    		mail(:to => family_member.email_id, :subject => "Investment Details for @user")
+    	end
+    end	
     current_controller  = "usermailer"
   end
 

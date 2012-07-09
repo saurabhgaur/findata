@@ -19,7 +19,9 @@ class UsersController < ApplicationController
   def sendmail
     @notifyees = current_user.family_members.select {|family_member| family_member.notify?}
     logger.debug("hello from the User controller Sendmail action")
-    UserMailer.investments_email(@user).deliver
+    @notifyees.each do |notifyee|
+      UserMailer.investments_email(@user,notifyee).deliver
+    end
   end
 
 private

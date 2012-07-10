@@ -57,3 +57,4 @@ gem 'faker'
 gem 'omniauth-facebook'
 gem 'omniauth-openid'
 gem "client_side_validations", :git => 'https://github.com/bcardarella/client_side_validations.git'
+gem "debugger"

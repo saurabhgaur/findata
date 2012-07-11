@@ -1,0 +1,101 @@
+2012-07-11T04:14:17+00:00 app[web.1]: 
+2012-07-11T04:14:17+00:00 app[web.1]: Started GET "/users/9/sendmail" for 149.77.162.136 at 2012-07-11 04:14:17 +0000
+2012-07-11T04:14:17+00:00 app[web.1]: 
+2012-07-11T04:14:17+00:00 app[web.1]: TypeError (can't convert nil into String):
+2012-07-11T04:14:17+00:00 app[web.1]:   app/mailers/user_mailer.rb:8:in `+'
+2012-07-11T04:14:17+00:00 app[web.1]:   app/mailers/user_mailer.rb:8:in `investments_email'
+2012-07-11T04:14:17+00:00 app[web.1]:   app/controllers/users_controller.rb:22:in `each'
+2012-07-11T04:14:17+00:00 app[web.1]:   app/controllers/users_controller.rb:23:in `block in sendmail'
+2012-07-11T04:14:17+00:00 app[web.1]:   app/controllers/users_controller.rb:22:in `sendmail'
+2012-07-11T04:14:17+00:00 app[web.1]: 
+2012-07-11T04:14:17+00:00 app[web.1]: 
+2012-07-11T04:14:17+00:00 app[web.1]: 
+2012-07-11T04:14:17+00:00 app[web.1]: 
+2012-07-11T04:14:17+00:00 app[web.1]: Started GET "/users/1" for 149.77.162.136 at 2012-07-11 04:14:17 +0000
+2012-07-11T04:14:17+00:00 app[web.1]: 
+2012-07-11T04:14:17+00:00 app[web.1]: ActiveRecord::RecordNotFound (Couldn't find User with id=1):
+2012-07-11T04:14:17+00:00 app[web.1]:   app/controllers/users_controller.rb:37:in `correct_user'
+2012-07-11T04:14:17+00:00 app[web.1]: 
+2012-07-11T04:14:17+00:00 app[web.1]: 
+2012-07-11T04:14:17+00:00 app[web.1]: Started GET "/users/9" for 149.77.162.136 at 2012-07-11 04:14:17 +0000
+2012-07-11T04:14:17+00:00 app[web.1]: 
+2012-07-11T04:14:17+00:00 app[web.1]: 
+2012-07-11T04:14:18+00:00 app[web.1]: 
+2012-07-11T04:14:18+00:00 app[web.1]: 
+2012-07-11T04:14:18+00:00 app[web
+.1]: Started GET "/users/9" for 149.77.162.136 at 2012-07-11 04:14:18 +0000
+2012-07-11T04:14:18+00:00 heroku[router]: GET findata.herokuapp.com/users/1 dyno=web.1 queue=0 wait=0ms service=1034ms status=404 bytes=728
+2012-07-11T04:14:18+00:00 heroku[router]: GET findata.herokuapp.com/users/9/sendmail dyno=web.1 queue=0 wait=0ms service=1969ms status=500 bytes=643
+2012-07-11T04:14:18+00:00 heroku[router]: GET findata.herokuapp.com/users/9 dyno=web.1 queue=0 wait=0ms service=911ms status=304 bytes=0
+2012-07-11T04:14:18+00:00 app[web.1]: 
+2012-07-11T04:14:18+00:00 app[web.1]: 
+2012-07-11T04:14:18+00:00 app[web.1]: Started GET "/users/9" for 149.77.162.136 at 2012-07-11 04:14:18 +0000
+2012-07-11T04:14:18+00:00 heroku[router]: GET findata.herokuapp.com/users/9 dyno=web.1 queue=0 wait=0ms service=1034ms status=304 bytes=0
+2012-07-11T04:14:18+00:00 heroku[router]: GET findata.herokuapp.com/users/9/sendmail dyno=web.1 queue=0 wait=0ms service=1892ms status=500 bytes=643
+2012-07-11T04:14:18+00:00 heroku[router]: GET findata.herokuapp.com/users/9 dyno=web.1 queue=0 wait=0ms service=378ms status=304 bytes=0
+2012-07-11T04:14:29+00:00 app[web.1]: 
+2012-07-11T04:14:29+00:00 app[web.1]: 
+2012-07-11T04:14:29+00:00 app[web.1]: Started GET "/users/2" for 149.77.162.136 at 2012-07-11 04:14:29 +0000
+2012-07-11T04:14:29+00:00 app[web.1]:   app/controllers/users_controller.rb:37:in `correct_user'
+2012-07-11T04:14:29+00:00 app[web.1]: 
+2012-07-11T04:14:29+00:00 app[web.1]: 
+2012-07-11T04:14:29+00:00 app[web.1]: 
+2012-07-11T04:14:29+00:00 app[web.1]: ActiveRecord::RecordNotFound (Couldn't find User with id=2):
+2012-07-11T04:14:29+00:00 heroku[router]: GET findata.herokuapp.com/users/2 dyno=web.1 queue=0 wait=0ms service=13ms status=404 bytes=728
+2012-07-11T04:14:34+00:00 app[web.1]: 
+2012-07-11T04:14:34+00:00 app[web.1]: 
+2012-07-11T04:14:34+00:00 app[web.1]: Started GET "/users/9" for 149.77.162.136 at 2012-07-11 04:14:34 +0000
+2012-07-11T04:14:34+00:00 heroku[router]: GET findata.herokuapp.com/users/9 dyno=web.1 queue=0 wait=0ms service=97ms status=304 bytes=0
+2012-07-11T04:14:38+00:00 heroku[router]: GET findata.herokuapp.com/assets/application-8e7bfeeffc9291864e5b42d908c2fdda.css dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
+2012-07-11T04:14:38+00:00 heroku[router]: GET findata.herokuapp.com/assets/application-fca59c8e162410b07f9b70637ddb1cd0.js dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
+2012-07-11T04:14:39+00:00 heroku[router]: GET findata.herokuapp.com/assets/glyphicons-halflings-white-13553a5bf21ae3cc374006592488ec64.png dyno=web.1 queue=0 wait=0ms service=1ms status=304 bytes=0
+2012-07-11T04:14:39+00:00 heroku[router]: GET findata.herokuapp.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+2012-07-11T04:15:08+00:00 app[web.1]: 
+2012-07-11T04:15:08+00:00 app[web.1]: Started GET "/users/9/sendmail" for 149.77.162.136 at 2012-07-11 04:15:08 +0000
+2012-07-11T04:15:08+00:00 app[web.1]: 
+2012-07-11T04:15:08+00:00 app[web.1]: 
+2012-07-11T04:15:08+00:00 app[web.1]: TypeError (can't convert nil into String):
+2012-07-11T04:15:08+00:00 app[web.1]:   app/mailers/user_mailer.rb:8:in `+'
+2012-07-11T04:15:08+00:00 app[web.1]:   app/controllers/users_controller.rb:22:in `each'
+2012-07-11T04:15:08+00:00 app[web.1]:   app/mailers/user_mailer.rb:8:in `investments_email'
+2012-07-11T04:15:08+00:00 app[web.1]:   app/controllers/users_controller.rb:23:in `block in sendmail'
+2012-07-11T04:15:08+00:00 app[web.1]:   app/controllers/users_controller.rb:22:in `sendmail'
+2012-07-11T04:15:08+00:00 app[web.1]: 
+2012-07-11T04:15:08+00:00 app[web.1]: 
+2012-07-11T04:15:08+00:00 heroku[router]: GET findata.herokuapp.com/users/9/sendmail dyno=web.1 queue=0 wait=0ms service=15ms status=500 bytes=643
+2012-07-11T04:15:13+00:00 app[web.1]: 
+2012-07-11T04:15:13+00:00 app[web.1]: 
+2012-07-11T04:15:13+00:00 app[web.1]: Started GET "/users/9" for 149.77.162.136 at 2012-07-11 04:15:13 +0000
+2012-07-11T04:15:13+00:00 heroku[router]: GET findata.herokuapp.com/users/9 dyno=web.1 queue=0 wait=0ms service=54ms status=304 bytes=0
+2012-07-11T04:16:44+00:00 app[web.1]: 
+2012-07-11T04:16:44+00:00 app[web.1]: Started GET "/investments/14/edit" for 149.77.162.136 at 2012-07-11 04:16:44 +0000
+2012-07-11T04:16:44+00:00 app[web.1]: 
+2012-07-11T04:16:45+00:00 heroku[router]: GET findata.herokuapp.com/investments/14/edit dyno=web.1 queue=0 wait=0ms service=916ms status=200 bytes=4637
+2012-07-11T04:16:49+00:00 app[web.1]: 
+2012-07-11T04:16:49+00:00 app[web.1]: Started GET "/users/9" for 149.77.162.136 at 2012-07-11 04:16:49 +0000
+2012-07-11T04:16:49+00:00 app[web.1]: 
+2012-07-11T04:16:49+00:00 heroku[router]: GET findata.herokuapp.com/users/9 dyno=web.1 queue=0 wait=0ms service=38ms status=304 bytes=0
+2012-07-11T04:16:54+00:00 app[web.1]: 
+2012-07-11T04:16:54+00:00 app[web.1]: Started GET "/investments/new" for 149.77.162.136 at 2012-07-11 04:16:54 +0000
+2012-07-11T04:16:54+00:00 app[web.1]: 
+2012-07-11T04:16:54+00:00 heroku[router]: GET findata.herokuapp.com/investments/new dyno=web.1 queue=0 wait=0ms service=93ms status=304 bytes=0
+2012-07-11T04:17:27+00:00 app[web.1]: 
+2012-07-11T04:17:27+00:00 app[web.1]: 
+2012-07-11T04:17:27+00:00 app[web.1]: Started GET "/users/9" for 149.77.162.136 at 2012-07-11 04:17:27 +0000
+2012-07-11T04:17:27+00:00 heroku[router]: GET findata.herokuapp.com/users/9 dyno=web.1 queue=0 wait=0ms service=109ms status=304 bytes=0
+2012-07-11T04:31:55+00:00 heroku[router]: GET findata.herokuapp.com/ dyno=web.1 queue=0 wait=0ms service=40ms status=302 bytes=102
+2012-07-11T04:31:55+00:00 heroku[router]: GET findata.herokuapp.com/users/5 dyno=web.1 queue=0 wait=0ms service=91ms status=200 bytes=6266
+2012-07-11T04:31:55+00:00 app[web.1]: 
+2012-07-11T04:31:55+00:00 app[web.1]: 
+2012-07-11T04:31:55+00:00 app[web.1]: Started GET "/" for 49.206.171.66 at 2012-07-11 04:31:55 +0000
+2012-07-11T04:31:55+00:00 app[web.1]: Started GET "/users/5" for 49.206.171.66 at 2012-07-11 04:31:55 +0000
+2012-07-11T04:31:55+00:00 app[web.1]: 
+2012-07-11T04:31:55+00:00 app[web.1]: 
+2012-07-11T04:31:56+00:00 heroku[router]: GET findata.herokuapp.com/assets/application-fca59c8e162410b07f9b70637ddb1cd0.js dyno=web.1 queue=0 wait=0ms service=118ms status=200 bytes=333634
+2012-07-11T04:31:56+00:00 heroku[router]: GET findata.herokuapp.com/assets/application-8e7bfeeffc9291864e5b42d908c2fdda.css dyno=web.1 queue=0 wait=0ms service=89ms status=200 bytes=92524
+2012-07-11T04:32:01+00:00 heroku[router]: GET findata.herokuapp.com/assets/glyphicons-halflings-white-13553a5bf21ae3cc374006592488ec64.png dyno=web.1 queue=0 wait=0ms service=9ms status=200 bytes=8777
+2012-07-11T04:32:02+00:00 heroku[router]: GET findata.herokuapp.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=0
+2012-07-11T04:32:04+00:00 app[web.1]: Started GET "/users/5/sendmail" for 49.206.171.66 at 2012-07-11 04:32:04 +0000
+2012-07-11T04:32:04+00:00 app[web.1]: 
+2012-07-11T04:32:04+00:00 app[web.1]: 
+2012-07-11T04:32:06+00:00 heroku[router]: GET findata.herokuapp.com/users/5/sendmail dyno=web.1 queue=0 wait=0ms service=1986ms status=304 bytes=0

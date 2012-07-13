@@ -12,7 +12,6 @@ class FamilyMembersController < ApplicationController
 
   def new
     @family_member = current_user.family_members.build(params[:family_member])
-
     respond_to do |format|
       format.html # new.html.haml
       format.json { render json: @family_member }
@@ -23,6 +22,8 @@ class FamilyMembersController < ApplicationController
 
   def edit
     @family_member = current_user.family_members.find_by_id(params[:id])
+    @addressable = @family_member
+    @address = @family_member.addresses.build
   end
 
 

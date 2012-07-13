@@ -19,7 +19,7 @@ Findata::Application.routes.draw do
 
 
   resources :family_members, only: [:new, :edit, :update, :create, :destroy] do
-  	resources :addresses
+  	resources :addresses, only:  [:new, :edit, :create, :destroy, :update] 
   end
 
   resources :investments, only: [:new, :edit, :create, :destroy, :update]

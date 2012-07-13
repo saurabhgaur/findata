@@ -1,2 +1,57 @@
 %h2 Edit Family Member
-=render 'form'
+= simple_form_for @family_member, validate: true do |f|
+  .form-inline.form-horizontal
+    = f.input :name, placeholder: "Family Member Name..."
+    = f.input :email_id, placeholder: "Family Member EmailID..."
+    = f.input :notify
+    %h3 
+      Addresses
+      = link_to 'Add Address', new_polymorphic_path([@addressable,@address]), {'class' => 'btn btn-primary pull-right'} 
+  .AddressesList
+  .btn-toolbar
+    
+  %p
+  %table.table.table-striped.table-bordered.table-condensed
+    %tr
+      %th ID
+      %th First Line
+      %th Second Line
+      %th City
+      %th State
+      %th Country
+      %th Pin
+      %th Actions
+    -@family_member.addresses.each do |address|
+      - if address.id
+        %tr
+          %td{:width => "2%;"}
+            =address.id
+          %td
+            =address.first_line
+          %td
+            =address.second_line
+          %td
+            =address.city
+          %td
+            =address.state
+          %td
+            =address.country
+          %td
+            =address.zip
+          %td{:width => "12%;"}
+            =link_to edit_polymorphic_path([@addressable, address]), :class=>'btn btn-mini btn-danger edit_address'  do 
+              %i{:class=>'icon-edit icon-white'}
+              %span
+                Edit
+              %end
+            =link_to [@addressable, address], method: :delete, remote: :true, confirm: "You sure?", :class => 'btn btn-mini btn-danger delete_address pull-right' do 
+              %i{:class=>'icon-trash icon-white'}
+              %span
+                Delete
+              %end
+  %br/
+  %br/   
+  #footer.pull-right
+  
+    = link_to 'Cancel', current_user , :class => "btn btn-danger"
+    = f.submit "Save", class: "btn btn-primary"
